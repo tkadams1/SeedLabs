@@ -1,0 +1,9 @@
+openssl req -newkey rsa:2048 -sha256  \
+            -keyout instagram.key   -out instagram.csr  \
+-subj "/CN=www.instagram.com/O=Instagram Inc./C=US" \
+-passout pass:dees
+
+openssl ca -config openssl.cnf -policy policy_anything \
+           -md sha256 -days 3650 \
+           -in instagram.csr -out instagram.crt -batch \
+           -cert ca.crt -keyfile ca.key

@@ -1,0 +1,1 @@
+tr 'qmihyb' 'EATNOH' <lab1task1ciphertext.txt> decodedlab1.txt

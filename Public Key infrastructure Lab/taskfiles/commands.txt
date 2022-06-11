@@ -1,0 +1,7 @@
+openssl req -newkey rsa:2048 -sha256  \
+            -keyout server.key   -out server.csr  \
+            -subj "/CN=www.adams2022.com/O=Adams LLC. Inc./C=US" \
+            -passout pass:dees \
+            -addext "subjectAltName = DNS:www.adams2022.com, \
+            				DNS:www.adams2022A.com, \
+            				DNS:www.adams2022B.com"
